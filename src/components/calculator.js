@@ -13,8 +13,6 @@ const Calculator = ({
   return (
     <>
       <div className="flex flex-col gap-2 items-center w-full">
-        <p className="text-gray-400">Thickness: {thickness} cm</p>
-
         <input
           type="range"
           value={thickness}
@@ -26,6 +24,7 @@ const Calculator = ({
           step={stepThickness}
           className="w-full"
         />
+        <p className="text-gray-400">Thickness: {thickness} cm</p>
       </div>
     </>
   );

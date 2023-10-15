@@ -24,6 +24,10 @@ export default function Home() {
 
         <div className="h-8"></div>
 
+        <h2 className="font-bold text-gray-800 text-xl text-center">
+          Calculator
+        </h2>
+
         <Calculator
           minThickness={0.5}
           maxThickness={7.5}
