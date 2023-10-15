@@ -19,7 +19,7 @@ const Calculator = ({
           type="range"
           value={thickness}
           onChange={(e) => {
-            setThickness(parseInt(e.target.value));
+            setThickness(parseFloat(e.target.value));
           }}
           min={minThickness}
           max={maxThickness}
