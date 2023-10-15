@@ -6,7 +6,16 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // Pink-brown gradient of steak temperatures
+      backgroundColor: {
+        rare: "#A52A2A",
+        "mid-rare": "#d66e60",
+        medium: "#ebb1a9",
+        "mid-well": "#b36850",
+        well: "#a14223",
+      },
+    },
   },
   plugins: [],
 };
