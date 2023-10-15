@@ -1,3 +1,5 @@
+import Calculator from "@/components/calculator";
+
 export default function Home() {
   return (
     <div className="flex justify-center">
@@ -19,6 +21,13 @@ export default function Home() {
             Steak Cooked Precisely
           </h2>
         </div>
+
+        <Calculator
+          minThickness={0.5}
+          maxThickness={7.5}
+          stepThickness={0.5}
+          defaultThickness={2}
+        />
       </div>
     </div>
   );
