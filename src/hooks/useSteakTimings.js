@@ -1,17 +1,27 @@
-const useSteakTimings = (thickness) => {
-  const rare = thickness * 30;
-  const midRare = thickness * 40;
-  const medium = thickness * 50;
-  const midWell = thickness * 60;
-  const well = thickness * 70;
+import { timing as timingURL } from "@/api/urls";
+import { useEffect, useState } from "react";
 
-  return {
-    rare,
-    midRare,
-    medium,
-    midWell,
-    well,
-  };
+const useSteakTimings = (thickness) => {
+  const [timings, setTimings] = useState({});
+
+  useEffect(() => {
+    fetch(timingURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ thickness }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setTimings(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [thickness]);
+
+  return timings;
 };
 
 export default useSteakTimings;
