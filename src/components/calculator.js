@@ -12,23 +12,20 @@ const Calculator = ({
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center">
-        <p className="text-gray-400">{thickness} cm</p>
+      <div className="flex flex-col gap-2 items-center w-full">
+        <p className="text-gray-400">Thickness: {thickness} cm</p>
 
-        <div className="flex gap-2">
-          <p>{minThickness} cm</p>
-          <input
-            type="range"
-            value={thickness}
-            onChange={(e) => {
-              setThickness(e.target.value);
-            }}
-            min={minThickness}
-            max={maxThickness}
-            step={stepThickness}
-          />
-          <p>{maxThickness} cm</p>
-        </div>
+        <input
+          type="range"
+          value={thickness}
+          onChange={(e) => {
+            setThickness(e.target.value);
+          }}
+          min={minThickness}
+          max={maxThickness}
+          step={stepThickness}
+          className="w-full"
+        />
       </div>
     </>
   );

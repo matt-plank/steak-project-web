@@ -3,7 +3,7 @@ import Calculator from "@/components/calculator";
 export default function Home() {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col items-center gap-5 p-5">
+      <div className="flex flex-col items-center gap-5 p-5 w-full max-w-lg">
         <div className="h-8"></div>
 
         <img
