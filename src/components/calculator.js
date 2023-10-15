@@ -1,5 +1,6 @@
 "use client";
 
+import useSteakTimings from "@/hooks/useSteakTimings";
 import { useState } from "react";
 
 const Calculator = ({
@@ -9,6 +10,7 @@ const Calculator = ({
   defaultThickness,
 }) => {
   const [thickness, setThickness] = useState(defaultThickness);
+  const timings = useSteakTimings(thickness);
 
   return (
     <>
@@ -35,11 +37,11 @@ const Calculator = ({
           <p className="text-center text-black">Medium</p>
           <p className="text-center text-black"></p>
           <p className="text-center text-black">Well</p>
-          <div className="bg-rare rounded-sm p-2">00:45</div>
-          <div className="bg-mid-rare rounded-sm p-2">01:00</div>
-          <div className="bg-medium rounded-sm p-2">01:15</div>
-          <div className="bg-mid-well rounded-sm p-2">01:30</div>
-          <div className="bg-well rounded-sm p-2">01:45</div>
+          <div className="bg-rare rounded-sm p-2">{timings.rare}s</div>
+          <div className="bg-mid-rare rounded-sm p-2">{timings.midRare}s</div>
+          <div className="bg-medium rounded-sm p-2">{timings.medium}s</div>
+          <div className="bg-mid-well rounded-sm p-2">{timings.midWell}s</div>
+          <div className="bg-well rounded-sm p-2">{timings.well}s</div>
         </div>
       </div>
     </>
