@@ -1,6 +1,6 @@
 # steak-project-web
 
-The front-end of my website - The Steak Project - accessible at [steakproject.com](https://steakproject.com). Built with Next.js and React.
+The front-end of my website - The Steak Project - accessible at [thesteakproject.com](https://thesteakproject.com). Built with Next.js and React.
 
 ## Setting Up
 
